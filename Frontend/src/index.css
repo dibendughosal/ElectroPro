@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+/*here add custom class to use Tailwind css property*/
+.underLine{
+    @apply w-full h-1 rounded-2xl transition-all duration-200 ease-in hidden group-hover:flex bg-white;
+}
+.NavStyle{
+    @apply font-bold text-lg hover:text-red-600 transition-all duration-200 hover:scale-[1.02];
+}
+.subNavbar{
+    @apply px-4 hover:bg-black transition duration-200 cursor-pointer hover:font-semibold hover:text-white;
+}
