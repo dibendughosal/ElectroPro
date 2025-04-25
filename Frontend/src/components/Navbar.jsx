@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import logo from "../assets/logoicon.png"
 function Navbar() {
    const [isLogin, setIsLogin] = useState(false);
+   const [cartValue, setcartValue] = useState(0);
    const handleLogin = ()=> {
     setIsLogin(true);
    }
@@ -18,15 +19,16 @@ function Navbar() {
         </div>
         <h1 className='text-[10px] font-serif tracking-widest font-light'>ElectroPro</h1>
       </Link>
-      <div className='flex gap-4'>
+      <div className='flex gap-5'>
         <Link to="/home" className='NavStyle group'>Home
         <div className='underLine'></div>
         </Link>
         <Link to="/product" className='NavStyle group'>Product
         <div className='underLine'></div>
         </Link>
-        <Link to="/cart" className='NavStyle group'>Cart
+        <Link to="/cart" className='NavStyle group relative'>Cart
         <div className='underLine'></div>
+        <div className='absolute -top-2 -right-3.5 font-medium px-1 text-[13px] bg-red-600 group-hover:text-white'>{cartValue}</div>
         </Link>
         <Link to="/contact" className='NavStyle group'>Contact Us
         <div className='underLine'></div>
