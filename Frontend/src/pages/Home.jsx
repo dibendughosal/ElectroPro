@@ -5,6 +5,7 @@ import img2 from "../assets/refu.png";
 import Item from '../components/Item';
 import Item2 from '../components/Item2';
 import Services from '../components/Services';
+import Category from '../components/Category';
 function Home() {
 
   const [value, setValue] = useState("")
@@ -30,6 +31,7 @@ function Home() {
         <Item2 src={img2} desc="Welcome to our refurbished Mac collection, where quality meets affordability. Our meticulously curated selection of refurbished Mac computers offers you the best of both worlds – top-notch performance and significant savings. Each Mac undergoes rigorous testing and refurbishment processes to ensure it meets our high standards, providing you with a reliable computing experience without compromising on quality." heading="Refurbished Mac Book" button="Learn More" />
       </div>
       <Services/>
+      <Category/>
     </>
   )
 }
