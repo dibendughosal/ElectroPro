@@ -6,11 +6,13 @@ import Item from '../components/Item';
 import Item2 from '../components/Item2';
 import Services from '../components/Services';
 import Category from '../components/Category';
+import SubNavbar from '../components/SubNavbar';
 function Home() {
 
   const [value, setValue] = useState("")
   return (
     <>
+      <SubNavbar/>
       <div className="w-full h-[500px] flex justify-center pt-30 bg-no-repeat bg-center bg-cover" style={{backgroundImage: `url(${heroImg})`}}>
         <div className='flex flex-col gap-y-6 items-center'>
           <div className='flex w-[500px] relative'>

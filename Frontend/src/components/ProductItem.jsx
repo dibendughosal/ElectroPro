@@ -9,7 +9,7 @@ function ProductItem({brandName, title, startingPrice, cuttprice, descrption, th
                 <h1 className="font-bold text-lg">{brandName}</h1>
             </div>
             <div className="space-y-1 pb-2">
-                <h1 className="font-bold text-2xl">{title}</h1>
+                <h1 className="font-bold text-2xl pt-2">{title}</h1>
                 <h3><span className="font-bold">FROM ₹{startingPrice}*</span> <s>₹ {cuttprice}</s></h3>
                 <p className="text-sm font-">{descrption}</p>
             </div>

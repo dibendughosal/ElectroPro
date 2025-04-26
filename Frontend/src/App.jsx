@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="h-screen w-full ">
       <Navbar/>
-      <SubNavbar/>
+      
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/product" element={<Product/>}/>
