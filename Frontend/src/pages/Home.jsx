@@ -7,6 +7,7 @@ import Item2 from '../components/Item2';
 import Services from '../components/Services';
 import Category from '../components/Category';
 import SubNavbar from '../components/SubNavbar';
+import Testinomial from '../components/Testinomial';
 function Home() {
 
   const [value, setValue] = useState("")
@@ -17,7 +18,7 @@ function Home() {
         <div className='flex flex-col gap-y-6 items-center'>
           <div className='flex w-[500px] relative'>
             <input type="text" value={value} onChange={(event) => setValue(event.target.value)} className='w-[400px] rounded-tl-3xl rounded-bl-3xl border-none outline-none bg-white px-4 py-3' placeholder='Search iPhones, macbook....'/>
-            <button className='w-25 bg-red-600 font-bold text-white rounded-e-3xl relative -left-0.5 cursor-pointer'>Search</button>
+            <button className='w-25 bg-red-600 font-bold text-white rounded-e-3xl relative -left-0.5 cursor-pointer hover:bg-red-700 active:text-lg'>Search</button>
           </div>
           <div className='text-[43px] w-[800px] font-bold flex justify-center'>
             <h1 className='text-center'>
@@ -34,6 +35,7 @@ function Home() {
       </div>
       <Services/>
       <Category/>
+      <Testinomial/>
     </>
   )
 }

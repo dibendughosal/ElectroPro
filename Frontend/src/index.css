@@ -13,3 +13,17 @@
 .btn{
     @apply px-4 py-2 bg-red-600 font-bold text-white rounded-3xl cursor-pointer hover:bg-white hover:text-red-600 hover:border transition-all ease-in duration-200 origin-bottom;
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* For Firefox */
+  .hide-scrollbar {
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  /* For IE/Edge */
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }

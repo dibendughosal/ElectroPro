@@ -4,7 +4,7 @@ import productData from '../data/productData'
 
 function Product() {
   return (
-    <div className='flex flex-wrap gap-5 px-10 py-5'>
+    <div className='flex flex-wrap space-y-6 gap-5 px-10 py-5'>
      {
       productData.map( (data) => {
         return <div key={data.id}>
