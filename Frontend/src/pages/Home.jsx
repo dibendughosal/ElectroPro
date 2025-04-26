@@ -8,6 +8,7 @@ import Services from '../components/Services';
 import Category from '../components/Category';
 import SubNavbar from '../components/SubNavbar';
 import Testinomial from '../components/Testinomial';
+import Footer from '../components/Footer';
 function Home() {
 
   const [value, setValue] = useState("")
@@ -36,6 +37,7 @@ function Home() {
       <Services/>
       <Category/>
       <Testinomial/>
+      <Footer/>
     </>
   )
 }

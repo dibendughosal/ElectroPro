@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/*here add custom class to use Tailwind css property*/
 .underLine{
     @apply w-full h-1 rounded-2xl transition-all duration-200 ease-in hidden group-hover:flex bg-white;
 }
@@ -17,13 +16,10 @@
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
-  
-  /* For Firefox */
   .hide-scrollbar {
     scrollbar-width: none; /* Firefox */
   }
   
-  /* For IE/Edge */
   .hide-scrollbar {
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    -ms-overflow-style: none; /* EDGE and Others */
   }

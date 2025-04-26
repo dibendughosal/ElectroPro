@@ -10,9 +10,8 @@ import Maintainance from "./pages/Maintainance"
 function App() {
 
   return (
-    <div className="h-screen w-full ">
+    <div className="h-screen w-full">
       <Navbar/>
-      
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/product" element={<Product/>}/>
@@ -21,6 +20,7 @@ function App() {
         <Route path="/home" element={<Home/>}/>
         <Route path="*" element={<Maintainance/>}/>
       </Routes>
+
     </div>
   )
 }
