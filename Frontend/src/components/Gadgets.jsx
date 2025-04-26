@@ -7,6 +7,7 @@ function Gadgets({src, paragraph}) {
         </div>
         </div>
         <h1>{paragraph}</h1>
+        <h2>Updated</h2>
     </div>
   )
 }
