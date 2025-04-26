@@ -18,7 +18,6 @@ function Category() {
             <Gadgets src={img1} paragraph="Restored Cell PhoneS"/>
             <Gadgets src={img5} paragraph="Restored tablets"/>
             <Gadgets src={img8} paragraph="Restored Computer"/>
-            <Gadgets/>
         </div>
       </div>
     </div>

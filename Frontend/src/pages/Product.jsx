@@ -4,12 +4,18 @@ import productData from '../data/productData'
 
 function Product() {
   return (
-    <div>
+    <div className='flex flex-wrap gap-5 px-10 py-5'>
      {
       productData.map( (data) => {
         return <div key={data.id}>
           <ProductItem 
-          brandname={data.brandName}
+          brandName={data.brandName}
+          title={data.title}
+          startingPrice={data.startingPrice}
+          cuttprice={data.cuttprice}
+          descrption={data.descrption}
+          thumbnail={data.thumbnail}
+          id={data.id}
           />
         </div>
       })
