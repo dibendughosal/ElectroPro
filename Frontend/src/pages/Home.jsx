@@ -15,16 +15,17 @@ function Home() {
   return (
     <>
       <SubNavbar/>
-      <div className="w-full h-[500px] flex justify-center pt-30 bg-no-repeat bg-center bg-cover" style={{backgroundImage: `url(${heroImg})`}}>
+      <div className="w-full sm:h-[500px] flex justify-center py-30 bg-no-repeat bg-center bg-cover" style={{backgroundImage: `url(${heroImg})`}}>
         <div className='flex flex-col gap-y-6 items-center'>
           <div className='flex w-[500px] relative'>
             <input type="text" value={value} onChange={(event) => setValue(event.target.value)} className='w-[400px] rounded-tl-3xl rounded-bl-3xl border-none outline-none bg-white px-4 py-3' placeholder='Search iPhones, macbook....'/>
             <button className='w-25 bg-red-600 font-bold text-white rounded-e-3xl relative -left-0.5 cursor-pointer hover:bg-red-700 active:text-lg'>Search</button>
           </div>
           <div className='text-[43px] w-[800px] font-bold flex justify-center'>
-            <h1 className='text-center'>
-              The best way to buy the refurbished products you love.
-            </h1>
+            <div className='text-center'>
+              <h1 className='hidden md:flex'>The best way to buy the refurbished products you love.</h1>
+              <h1 className='text-xl md:hidden text-center w-full px-10'>The best way to buy products.</h1>
+            </div>
           </div>
           <button className='px-4 py-2 bg-red-600 font-bold text-white rounded-3xl cursor-pointer hover:bg-white hover:text-red-600 hover:border transition-all ease-in duration-200 origin-bottom'>Shop Now</button>
         </div>

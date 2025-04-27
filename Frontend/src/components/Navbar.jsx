@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router';
 import logo from "../assets/logoicon.png"
+import { Menu } from "lucide-react";
+
 function Navbar() {
    const [isLogin, setIsLogin] = useState(false);
    const [cartValue, setcartValue] = useState(0);
+   const [open, setOpen] = useState(false);
    const handleLogin = ()=> {
     setIsLogin(true);
    }
@@ -11,7 +14,7 @@ function Navbar() {
     setIsLogin(false)
    }
   return (
-    <div className='py-4 w-full flex justify-between px-14 items-center bg-black text-white border-b-2 border-b-amber-50'>
+    <div className='relative py-4 w-full flex justify-between px-14 items-center bg-black text-white border-b-2 border-b-amber-50'>
       <Link to="/" className='h-8 flex flex-col justify-center items-center'>
         <div className='h-full flex'>
           <img src={logo} alt="" className="h-full invert" />
@@ -19,7 +22,9 @@ function Navbar() {
         </div>
         <h1 className='text-[10px] font-serif tracking-widest font-light'>ElectroPro</h1>
       </Link>
-      <div className='flex gap-5'>
+      
+      <div className='w-2/3 flex hidden sm:flex gap-x-10 justify-between items-center'>
+      <div className='hidden sm:flex gap-5'>
         <Link to="/home" className='NavStyle group'>Home
         <div className='underLine'></div>
         </Link>
@@ -35,9 +40,30 @@ function Navbar() {
         </Link>
         
       </div>
-      <div className="font-bold border border-amber-200 px-5 py-2 rounded-3xl bg-red-700 hover:text-red-700 hover:bg-white cursor-pointer">
+      <div className="w-[100px] font-bold border border-amber-200 px-5 py-2 rounded-3xl bg-red-700 text-center hover:text-red-700 hover:bg-white cursor-pointer">
         {isLogin ? <button onClick={handleLogout} className='cursor-pointer'>Logout</button>: <button onClick={handleLogin} className='cursor-pointer'>Login</button>}
       </div>
+      </div>
+
+      <button className="block sm:hidden" onClick={() => setOpen(!open)}>
+        <Menu className="w-6 h-6 text-white" />
+      </button>
+
+      {
+        open && (
+          <div className='absolute top-16 right-0 w-[150px] bg-gray-400 flex flex-col items-center space-y-4 py-4 sm:hidden rounded-b-2xl z-1000'>
+        <Link to="/home" className='NavStyle focus:bg-red-600 w-full text-center'>Home
+        </Link>
+        <Link to="/product" className='NavStyle  focus:bg-red-600 w-full text-center'>Product
+        </Link>
+        <Link to="/cart" className='NavStyle  focus:bg-red-600 w-full text-center'>Cart
+        </Link>
+        <Link to="/contact" className='NavStyle  focus:bg-red-600 w-full text-center'>Contact Us
+        </Link>
+        
+          </div>
+        )
+      }
       
     </div>
   )

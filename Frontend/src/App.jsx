@@ -10,7 +10,7 @@ import Maintainance from "./pages/Maintainance"
 function App() {
 
   return (
-    <div className="h-screen w-full">
+    <div className="h-screen w-full overflow-x-hidden">
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>}/>

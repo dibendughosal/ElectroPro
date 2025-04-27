@@ -4,20 +4,20 @@ import logo from "../assets/logoicon.png"
 
 function Footer() {
   return (
-    <div className='bg-black h-[50%] w-full text-white'>
+    <div className='bg-black h-[30%] flex flex-col justify-around items-center sm:h-[50%] w-full text-white'>
         {/* First */}
       <div className='flex w-[94%] mx-auto justify-between py-10'>
         {/* First Left */}
         <div className='flex flex-col gap-y-4'>
             <h1 className='text-xl'>Sign up & get 10% off</h1>
-            <div>
+            <div className='flex w-full'>
                 <input type="text" placeholder='Email' className='bg-white text-gray-800 font-medium outline-none px-5 py-2 rounded-tl-xl rounded-bl-xl'/>
                 <button className='rounded-e-xl hover:bg-red-700 bg-red-600 px-4 py-2 font-medium'>Sign up</button>
             </div>
             <p className='text-[11px] font-normal text-gray-400'>*New customers only, Offer lasts 30 days. see Terms.</p>
         </div>
         {/* First right */}
-        <div className='flex justify-between gap-x-20 pr-20'>
+        <div className='hidden md:flex justify-between gap-x-20 pr-20'>
             {/* My Account */}
             <div className='flex flex-col gap-3'>
                 <h1 className='text-lg'>My Account</h1>
@@ -55,13 +55,13 @@ function Footer() {
       </div>
 
         {/* Second */}
-      <div className='flex justify-between px-15'>
+      <div className='w-[94%] mx-auto flex justify-between px-15'>
         <div>
             <p className='text-gray-400'>Powered By</p>
             <h1 className='font-bold pl-1 text-xl tracking-wider'>Electro<span className='font-extrabold pt-2 text-red-600 text-xl'>Pro</span></h1>
         </div>
 
-        <div className='flex flex-col justify-center items-center'>
+        <div className='flex flex-col justify-center items-center text-center'>
             <p>Made in Kolkata, IN</p>
             <p>Copyright © 2024 ElectroPro.com, All Rights Reserve</p>
         </div>
